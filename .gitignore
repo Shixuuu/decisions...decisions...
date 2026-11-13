@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+ENV/
+
+# Rust TUI build artifacts (tui/Cargo.lock is tracked)
+tui/target/
+
+# Decision Forge runtime caches, local outputs, and notebooks
+.cache/
+runs/
+*.ipynb
+
+# OS & editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

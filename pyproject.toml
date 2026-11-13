@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "decision-forge"
+version = "0.1.0"
+description = "Cross-platform local and Colab Decision Model training, calibration, DecideBench evaluation, and serving studio."
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = { text = "Apache-2.0" }
+dependencies = [
+    "torch>=2.6.0",
+    "transformers>=4.52.0",
+    "peft>=0.14.0",
+    "accelerate>=1.0.0",
+    "datasets>=4.0.0",
+    "huggingface-hub>=0.30.0",
+    "hf-xet>=1.0.0",
+    "safetensors>=0.4.5",
+    "numpy>=2.0.0",
+    "scipy>=1.13.0",
+    "rich>=13.9.0",
+    "prompt-toolkit>=3.0.48",
+    "httpx>=0.27.0",
+    "pydantic>=2.7.0",
+    "nbformat>=5.10.0",
+]
+
+[project.optional-dependencies]
+cuda = [
+    "bitsandbytes>=0.45.0; sys_platform != 'darwin'",
+]
+
+[project.scripts]
+decide = "decision_forge.cli:main"
+decide-setup = "decision_forge.bootstrap:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/decision_forge"]
