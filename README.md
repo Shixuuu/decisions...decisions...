@@ -1,4 +1,4 @@
-# Decision Forge
+# Decisions...decisions...
 
 Deployable, cross-platform (**Linux, Windows, macOS, and Google Colab**) training, calibration, DecideBench evaluation, and serving studio that turns any Hugging Face LLM (causal decoder or bidirectional encoder) into a calibrated **single-forward-pass Decision Model**.
 
